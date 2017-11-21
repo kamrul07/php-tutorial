@@ -1,10 +1,6 @@
 <!doctype html>
 <html>
-    <?php
-    //start session
-  session_start();
     
-    ?>
     <head>
     <title>Learn with me - array sourch code for practise</title>    
     </head>
@@ -17,35 +13,37 @@
             <h2 style="color: red;text-align: center;font-size: 28px;padding: 0px 3px 18px 0px;line-height: 0px;"><a href="http://kamrulhasanshuvo.info">with shuvo</a> </h2>
         </div>
         <div id="content" style="min-height:68vh;padding:20px">
-        <h2 style="font-size:38px;text-align:center">Throw - Catch - Try</h2>
+        <h2 style="font-size:38px;text-align:center">Array</h2>
       
         
                <br>
+               Upper case
                <hr>
                <br> 
-        
         <?php
+            $s=array(
+            "a"=>23,
+            "b"=>233,
+            "c"=>2335,
+            "d"=>2356
             
-            function test($shuvo){
-                
-                if($shuvo==5){
-                    
-                    throw new Exception("It is number 5");
-             
-                     }  
-                }
-                try{
-                    
-                    test(3);
-                    echo "This is not 5";
-                    
-                }   
-                catch(Exception $e){
-                    echo "message: ".$e->getMessage();
-                }              
+            
+            );
+            
+            $f=array_change_key_case($s,CASE_UPPER);
+            foreach($f as $f=>$g){
+            echo $f." = ".$g."<br>";
+            }
+            
+            echo "<br>
+               Lower case
+               <hr>
+               <br> ";
+             $k=array_change_key_case($s,CASE_LOWER);
+            foreach($k as $k=>$l){
+            echo $k." = ".$l."<br>";
+            }
             ?>
-        
-        
         </div>
        <div style="background-color:<?php echo "black";?>;width:100%;margin:0 auto;overflow: hidden;" id="header">
             

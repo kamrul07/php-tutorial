@@ -17,34 +17,31 @@
             <h2 style="color: red;text-align: center;font-size: 28px;padding: 0px 3px 18px 0px;line-height: 0px;"><a href="http://kamrulhasanshuvo.info">with shuvo</a> </h2>
         </div>
         <div id="content" style="min-height:68vh;padding:20px">
-        <h2 style="font-size:38px;text-align:center">Throw - Catch - Try</h2>
+        <h2 style="font-size:38px;text-align:center">Case sensative issues</h2><br>
+        <h2 style="font-size:38px;text-align:center"></h2>
       
         
                <br>
+               <p>Explode</p>
                <hr>
                <br> 
         
         <?php
+            $s="I love lisa";
             
-            function test($shuvo){
-                
-                if($shuvo==5){
-                    
-                    throw new Exception("It is number 5");
-             
-                     }  
-                }
-                try{
-                    
-                    test(3);
-                    echo "This is not 5";
-                    
-                }   
-                catch(Exception $e){
-                    echo "message: ".$e->getMessage();
-                }              
-            ?>
-        
+            $l="   I love lisa .....";
+            
+            echo strtoupper($s);
+            echo "<br>";
+            echo strtolower($s)."<br>";
+            echo ucfirst($s)."<br>";
+            echo ucwords($s)."<br>";
+            echo trim($l, ". ")."<br>";
+          
+            
+            
+        ?>
+         
         
         </div>
        <div style="background-color:<?php echo "black";?>;width:100%;margin:0 auto;overflow: hidden;" id="header">
